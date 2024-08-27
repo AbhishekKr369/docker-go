@@ -30,7 +30,7 @@ jobs:
       - name : Deploy to EC2
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          HOST: ${{ secrests.EC2.HOST }}
+          HOST: ${{ secrets.EC2.HOST }}
           USER: ${{ secrets.EC2.USER }}
         
         run: |
