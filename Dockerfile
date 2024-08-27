@@ -22,7 +22,7 @@ WORKDIR /app
 # Copy the Pre-built binary file from the previous stage
 COPY --from=builder /app/main ./
 
-EXPOSE 8080
+EXPOSE 4040
 
 # Run the binary
 CMD [ "./main" ]
