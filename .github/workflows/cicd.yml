@@ -27,6 +27,10 @@ jobs:
     needs: build
 
     steps:
+      - name: Print variables
+        run: |
+            echo "EC2_HOST: $EC2_HOST"
+            echo "EC2_USER: $EC2_USER"
       - name : Deploy to EC2
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
